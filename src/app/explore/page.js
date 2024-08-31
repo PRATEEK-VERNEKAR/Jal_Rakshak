@@ -13,7 +13,7 @@ import Image from "next/image";
 import Sidebar from "@/app/components/Sidebar";
 export default function Home() {
   return (
-    <div className="grid grid-cols-3 h-screen">
+    <div className="grid grid-cols-3 h-screen bg-gray-200">
   <div className="col-span-1 flex items-center justify-center border h-screen">
     <Sidebar />
   </div>

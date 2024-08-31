@@ -41,7 +41,7 @@ const strategies = [
 
 export default function ExploreCards() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-gray-200">
       {strategies.map((strategy) => (
         <div key={strategy.id} className="bg-white rounded-lg shadow-md overflow-hidden">
           <div className="relative h-48">
