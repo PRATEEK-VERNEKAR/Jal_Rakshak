@@ -33,15 +33,17 @@ export default function Article(){
           <section id="introduction">
             <h2 className="text-2xl font-semibold mb-2">Introduction</h2>
             <p>
-              Drip irrigation is a micro-irrigation system that has the potential to save water and nutrients by allowing water to drip slowly to the roots of plants, either from above the soil surface or buried below the surface. The goal is to place water directly into the root zone and minimize evaporation.
+            Drip irrigation is an efficient and sustainable method of watering crops that delivers water directly to the plant's root zone through a network of tubes, pipes, and emitters. Unlike traditional irrigation methods, which often waste water through evaporation and runoff, drip irrigation minimizes water loss by applying it slowly and precisely where it's needed most. This technique not only conserves water but also reduces weed growth, prevents soil erosion, and enhances nutrient absorption by maintaining optimal soil moisture levels. Drip irrigation is especially beneficial in arid and semi-arid regions where water scarcity is a significant concern, offering a practical solution to support agricultural productivity while preserving vital water resources.
             </p>
           </section>
   
           <section id="history">
             <h2 className="text-2xl font-semibold mb-2">History</h2>
             <p>
-              Modern drip irrigation began its development in Afghanistan in 1866 when researchers began experimenting with irrigation using clay pipe to create combination irrigation and drainage systems. In the 1920s, O.E. Robey experimented with irrigating through porous canvas hose at Michigan State University.
+            The history of drip irrigation dates back thousands of years, with its earliest forms believed to have been used in ancient agricultural practices. Some of the earliest evidence comes from China and the Middle East, where farmers used clay pots buried in the soil to slowly release water to plant roots, a rudimentary form of controlled irrigation. The modern concept of drip irrigation, however, began to take shape in the mid-20th century.
             </p>
+            <p>
+            In the 1950s, Simcha Blass, an Israeli water engineer, observed a large tree growing much faster than others around it due to a leak in a nearby water pipe, which provided slow, consistent watering. Inspired by this, Blass developed the first modern drip irrigation system, using polyethylene tubing to deliver water directly to plant roots. This innovation led to the establishment of Netafim, a company that would go on to become a global leader in drip irrigation technology. Over the subsequent decades, drip irrigation systems have evolved, incorporating advanced materials and technologies such as pressure-compensating emitters, filtration systems, and automation, making them more efficient and accessible. Today, drip irrigation is widely used worldwide, particularly in water-scarce regions, revolutionizing agricultural practices and significantly improving water use efficiency.          </p>
           </section>
   
           <section id="benefits">
