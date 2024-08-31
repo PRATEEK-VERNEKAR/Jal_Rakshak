@@ -28,7 +28,7 @@ const Sidebar = () => {
           ))}
         </ul>
       </nav>
-      <Link href='/post' className=" relative right-[-300px] w-[50%] bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-colors duration-200">
+      <Link href='/upload_post' className=" relative right-[-300px] w-[50%] bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-colors duration-200">
         <PlusCircle className="w-6 h-6" />
         <span>Post</span>
       </Link>
