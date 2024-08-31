@@ -23,7 +23,7 @@ const Feed = () => {
 
   return (
     <div className="max-w-2xl mx-auto">
-      <div className="sticky top-0 bg-gray-400 z-10 mb-2">   <div className="relative mx-auto">
+      <div className="sticky top-0 bg-gray-100 z-10 mb-2">   <div className="relative mx-auto">
       <input
         type="text"
         placeholder="Search"
@@ -91,7 +91,7 @@ const Feed = () => {
     </div> */}
 
 
-<div className="space-y-6 bg-gray-400 p-6 cursor-pointer" onClick={() => { router.push('/posts?user=1') }}>
+<div className="space-y-6 bg-gray-100 p-6 cursor-pointer" onClick={() => { router.push('/posts?user=1') }}>
     {posts.map((post, index) => (
       <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
         <div className="border-b border-gray-200 p-6">
