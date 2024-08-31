@@ -9,7 +9,7 @@ const Sidebar = () => {
     { name: 'My Groups', icon: Users, href: '/my_group_list' },
     { name: 'Interests', icon: Users, href: '/interested_groups' },
     { name: 'Profile', icon: User, href: '/profile' },
-    { name: 'Your Posts', icon: FileText, href: '/your-posts' },
+    { name: 'Your Posts', icon: FileText, href: '/profile' },
     { name: 'Notifications', icon: Bell, href: '/notifications' },
     { name: 'Logout', icon: LogOut, href: '/logout' },
   ];
