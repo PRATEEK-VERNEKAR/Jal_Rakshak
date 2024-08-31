@@ -35,7 +35,7 @@ const Feed = () => {
         </div>
       </div>
       
-      <div className="space-y-0" onClick={()=>{router.push('/posts?user=1')}}>
+      {/* <div className="space-y-0" onClick={()=>{router.push('/posts?user=1')}}>
         {posts.map((post, index) => (
           <div key={index} className="border-b border-gray-300 p-4">
             <p className="mb-2">{post.content}</p>
@@ -72,7 +72,50 @@ const Feed = () => {
             </div>
           </div>
         ))}
-    </div>
+    </div> */}
+
+
+<div className="space-y-6 bg-gray-100 p-6" onClick={() => { router.push('/posts?user=1') }}>
+    {posts.map((post, index) => (
+      <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+        <div className="border-b border-gray-200 p-6">
+          <p className="mb-4 text-gray-800 font-medium">{post.content}</p>
+          <div className="grid grid-cols-2 gap-4 h-[300px]">
+            {post.media.slice(0, 4).map((item, itemIndex) => (
+              <div key={itemIndex} className='h-full w-full overflow-hidden rounded-md border-2 border-gray-300 hover:border-blue-500 transition-colors duration-300'>
+                {item.type === 'image' ? (
+                  <img src={item.url} alt={`Post ${index} image ${itemIndex}`} className="h-full w-full object-cover rounded-md" />
+                ) : (
+                  <video src={item.url} className="w-full h-full object-cover rounded-md" controls />
+                )}
+              </div>
+            ))}
+          </div>
+          <div className="flex justify-between items-center mt-6">
+            <div className="flex items-center space-x-6">
+              <button className="flex items-center space-x-2 text-blue-600 hover:text-blue-800 transition-colors duration-300">
+                <ThumbsUp size={24} />
+                <span className="font-semibold">{223}</span>
+              </button>
+              <button className="flex items-center space-x-2 text-red-600 hover:text-red-800 transition-colors duration-300">
+                <ThumbsDown size={24} />
+                <span className="font-semibold">{1}</span>
+              </button>
+              <button className="flex items-center space-x-2 text-green-600 hover:text-green-800 transition-colors duration-300">
+                <MessageSquare size={24} />
+                <span className="font-semibold">{12}</span>
+              </button>
+            </div>
+            <button className="flex items-center space-x-2 text-purple-600 hover:text-purple-800 transition-colors duration-300">
+              <Share2 size={24} />
+              <span className="font-semibold">Share</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
     </div>
   );
 };
