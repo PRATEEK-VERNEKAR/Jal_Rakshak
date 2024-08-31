@@ -23,19 +23,19 @@ const Feed = () => {
 
   return (
     <div className="max-w-2xl mx-auto">
-      <div className="sticky top-0 bg-white z-10 mb-2">   <div className="relative max-w-md mx-auto">
+      <div className="sticky top-0 bg-white z-10 mb-2">   <div className="relative mx-auto">
       <input
         type="text"
         placeholder="Search"
-        className="w-full h-16 pl-14 pr-6 text-lg bg-gradient-to-r from-orange-50 to-orange-100 
+        className="w-full h-16 pl-14 pr-6 text-lg bg-gradient-to-r from-orange-100 to-orange-200 
                    border-2 border-orange-200 rounded-full 
                    focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent
                    transition-all duration-300 ease-in-out
-                   placeholder-orange-300 text-orange-800
+                   placeholder-orange-600 text-orange-800
                    shadow-md hover:shadow-lg"
       />
       <Search 
-        className="absolute left-5 top-1/2 transform -translate-y-1/2 text-orange-400
+        className="absolute left-5 top-1/2 transform -translate-y-1/2 text-orange-900
                    transition-all duration-300 ease-in-out
                    group-hover:text-orange-600" 
         size={24} 
