@@ -1,8 +1,7 @@
-"use client"; 
 
 import React from 'react';
 import { Star, Users, Calendar, DollarSign } from 'lucide-react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const groups = [
   {
@@ -40,11 +39,12 @@ const groups = [
 ];
 
 const GroupList = () => {
-    const router = useRouter();
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-6 text-center">My Interests</h1>
-      <div className="space-y-6">
+      {/* <div className="space-y-6"> */}
+      <Link href='/group_dashboard2' className="space-y-6" >
+
         {groups.map((group, index) => (
           <div key={index} className="bg-white rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-semibold text-center mb-2">{group.name}</h2>
@@ -77,7 +77,7 @@ const GroupList = () => {
             </div>
           </div>
         ))}
-      </div>
+      </Link>
     </div>
   );
 };
