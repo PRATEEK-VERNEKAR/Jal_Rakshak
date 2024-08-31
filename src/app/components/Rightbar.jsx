@@ -1,4 +1,6 @@
 import React from 'react';
+import { Star, Activity } from 'lucide-react';
+
 
 const QuoteAndProfile = () => {
   // This would typically come from props or a data fetch
@@ -23,24 +25,42 @@ const QuoteAndProfile = () => {
       </div>
 
       {/* Profile Section */}
-      <div className="flex-1  bg-gray-900 p-6 flex flex-col items-center justify-center text-white">
-        <img 
-          src={user.avatar} 
-          alt={user.name} 
-          className="w-32 h-32 rounded-full border-4 border-white mb-4"
-        />
-        <h3 className="text-xl font-semibold mb-2">{user.name}</h3>
-        <div className="flex space-x-4">
-          <div className="text-center">
-            <p className="font-bold">{user.posts}</p>
-            <p className="text-sm">Posts</p>
-          </div>
-          <div className="text-center">
-            <p className="font-bold">{user.rating}</p>
-            <p className="text-sm">Rating</p>
-          </div>
-        </div>
+      <div className="flex-1 bg-gradient-to-br from-gray-900 to-gray-800 p-8 flex flex-col items-center justify-center text-white rounded-lg shadow-xl">
+    <div className="relative mb-6">
+      <img 
+        src={user.avatar} 
+        alt={user.name} 
+        className="w-40 h-40 rounded-full border-4 border-blue-400 shadow-lg"
+      />
+      <div className="absolute bottom-0 right-0 bg-green-500 rounded-full p-2">
+        <Activity size={24} />
       </div>
+    </div>
+    <h3 className="text-2xl font-bold mb-4">{user.name}</h3>
+    <div className="flex space-x-8 mb-6">
+      <div className="text-center bg-gray-800 px-4 py-2 rounded-lg">
+        <p className="font-bold text-2xl">{user.posts}</p>
+        <p className="text-sm text-gray-400">Posts</p>
+      </div>
+      <div className="text-center bg-gray-800 px-4 py-2 rounded-lg">
+        <p className="font-bold text-2xl flex items-center justify-center">
+          {user.rating}
+          <Star size={16} className="ml-1 text-yellow-400" fill="currentColor" />
+        </p>
+        <p className="text-sm text-gray-400">Rating</p>
+      </div>
+    </div>
+    <div className="w-full max-w-md">
+      <h4 className="text-lg font-semibold mb-2">Impressions</h4>
+      <div className="bg-gray-700 rounded-full h-4 w-full overflow-hidden">
+        <div 
+          className="bg-gradient-to-r from-blue-500 to-purple-500 h-full rounded-full"
+          style={{ width: `${user.impressions}%` }}
+        ></div>
+      </div>
+      <p className="text-right text-sm text-gray-400 mt-1">{user.impressions}% positive</p>
+    </div>
+  </div>
     </div>
   );
 };
