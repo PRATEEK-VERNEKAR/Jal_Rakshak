@@ -44,7 +44,22 @@ const GroupDashboard = () => {
             <button type="button" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Join Group</button>
           </div>
         </div>
-        
+
+        <p>Sewage water conservation is a vital practice for ensuring sustainable water management. With increasing water scarcity, reusing treated wastewater can significantly reduce the strain on our freshwater resources.</p>
+
+<p>Advanced wastewater treatment processes can remove harmful contaminants from sewage, making it suitable for various non-potable uses such as agricultural irrigation, industrial processes, and landscape watering. This helps in conserving freshwater for essential human consumption.</p>
+<br></br>
+<p>Implementing effective sewage management systems is crucial to prevent water pollution and protect aquatic ecosystems. Properly treated sewage prevents harmful pathogens and pollutants from entering rivers, lakes, and oceans, safeguarding both human health and wildlife.</p>
+
+<p>By embracing sewage water conservation techniques, communities can lower their dependency on freshwater sources, reduce environmental pollution, and create a sustainable water cycle. This is especially important in urban areas where high population density puts a strain on local water supplies.</p>
+<br></br>
+<p>Sewage water conservation also involves public education and community engagement. Educating people about the benefits of wastewater reuse and how to reduce water waste at the source can lead to more sustainable practices and better water management strategies at the community level.</p>
+
+<p>Investing in sewage treatment infrastructure is not just an environmental necessity but also an economic opportunity. Creating jobs in the water treatment sector and developing new technologies for efficient wastewater reuse can drive economic growth and innovation.</p>
+<br></br>
+<p>Overall, sewage water conservation is a comprehensive approach to managing one of our most precious resources. It requires a combination of technological advancements, policy support, and public participation to achieve long-term sustainability.</p>
+
+<br></br>
         <div className="flex space-x-6">
           {/* Members List */}
           <div className="w-1/2">

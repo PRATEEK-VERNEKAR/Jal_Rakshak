@@ -28,7 +28,7 @@ const Feed = () => {
           <input
             type="text"
             placeholder="Search"
-            className="w-full h-[80px] pl-10 pr-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-300"
+            className=" bg-orange-100	 w-full h-[80px] pl-10 pr-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-300"
           />
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
 
