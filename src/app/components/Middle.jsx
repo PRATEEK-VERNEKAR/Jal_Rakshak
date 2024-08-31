@@ -79,6 +79,7 @@ const Feed = () => {
     {posts.map((post, index) => (
       <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
         <div className="border-b border-gray-200 p-6">
+          <h1 className='bold text-2xl px-4 py-2 border-b-2 mb-4 bg-cyan-200 shadow-lg shadow-cyan-500/50'>{post.user}</h1>
           <p className="mb-4 text-gray-800 font-medium">{post.content}</p>
           <div className="grid grid-cols-2 gap-4 h-[300px]">
             {post.media.slice(0, 4).map((item, itemIndex) => (

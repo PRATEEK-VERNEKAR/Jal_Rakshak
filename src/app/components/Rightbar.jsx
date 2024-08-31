@@ -13,10 +13,13 @@ const QuoteAndProfile = () => {
     <div className="w-full h-full flex flex-col">
       {/* Quote Section */}
       <div className="flex-1 bg-blue-100 p-6 flex flex-col justify-center">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800">Quote of the Day</h2>
+        {/* <h2 className="text-2xl font-bold mb-4 text-blue-800">Quote of the Day</h2>
         <blockquote className="text-lg italic text-blue-600">
           "Water is the driving force of all nature. Every drop counts in our fight for conservation. Let's pledge to use it wisely, recycle it diligently, and protect it fiercely. For in saving water, we save life itself. Our future depends on the choices we make today about this precious resource."
-        </blockquote>
+        </blockquote> */}
+        <h1 class="align-center text-8xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-teal-500 to-green-400 drop-shadow-md ">
+          JAL RAKSHAK
+        </h1>
       </div>
 
       {/* Profile Section */}
