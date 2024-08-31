@@ -41,12 +41,12 @@ const groups = [
 const GroupList = () => {
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6 text-center">My Interests</h1>
+      <h1 className="text-5xl font-bold mb-6 text-center uppercase ">My Interests</h1>
       {/* <div className="space-y-6"> */}
       <Link href='/group_dashboard2' className="space-y-6" >
 
         {groups.map((group, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-md p-6">
+          <div key={index} className="bg-blue-100 cursor-pointer rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-semibold text-center mb-2">{group.name}</h2>
             <p className="text-gray-600 text-center mb-4">{group.idea}</p>
             <div className="flex justify-between items-center">
@@ -61,7 +61,7 @@ const GroupList = () => {
                 </div>
               </div>
               <div>
-                    <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Join Group</button>
+                    <button type="button" class="text-gray-900 bg-gray-300 border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Join Group</button>
 
                 </div>
               <div className="space-y-2 text-right">

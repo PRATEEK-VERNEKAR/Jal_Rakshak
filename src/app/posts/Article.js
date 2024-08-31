@@ -82,10 +82,10 @@ export default function Article(){
                 <Video className="mr-2" /> Videos
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <video src="/api/placeholder/400/300" controls className="w-full h-auto rounded-lg shadow-md">
+                <video src="video4.mp4" controls className="w-full h-auto rounded-lg shadow-md">
                   Your browser does not support the video tag.
                 </video>
-                <video src="/api/placeholder/400/300" controls className="w-full h-auto rounded-lg shadow-md">
+                <video src="video3.mp4" controls className="w-full h-auto rounded-lg shadow-md">
                   Your browser does not support the video tag.
                 </video>
               </div>

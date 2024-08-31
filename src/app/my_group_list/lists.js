@@ -43,10 +43,10 @@ const GroupList = () => {
   const router = useRouter();
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6 text-center">Your Water Conservation Groups</h1>
+      <h1 className="text-5xl uppercase font-bold mb-6 text-center">Your Water Conservation Groups</h1>
       <div className="space-y-6"  onClick={()=>router.push('/group_dashboard')}>
         {groups.map((group, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-md p-6">
+          <div key={index} className="bg-gray-200 cursor-pointer rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-semibold text-center mb-2">{group.name}</h2>
             <p className="text-gray-600 text-center mb-4">{group.idea}</p>
             <div className="flex justify-between items-center">
