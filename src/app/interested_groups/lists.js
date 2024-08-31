@@ -44,7 +44,7 @@ const GroupList = () => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-6 text-center">My Interests</h1>
-      <div className="space-y-6" onClick={()=>router.push('/group_dashboard')}>
+      <div className="space-y-6">
         {groups.map((group, index) => (
           <div key={index} className="bg-white rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-semibold text-center mb-2">{group.name}</h2>

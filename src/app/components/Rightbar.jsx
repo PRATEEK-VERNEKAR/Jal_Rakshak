@@ -3,7 +3,7 @@ import React from 'react';
 const QuoteAndProfile = () => {
   // This would typically come from props or a data fetch
   const user = {
-    name: "John Doe",
+    name: "Prateek M Vernekar",
     avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPJ9cm0-r5p50py0yUzvM5ZtEB-xWoJRPRA&s",
     posts: 127,
     rating: 4.8
