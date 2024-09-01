@@ -1,14 +1,6 @@
 import React from 'react';
 import { Calendar, Mail, User, Droplet, Users, MessageCircle } from 'lucide-react';
-
-const dummyUser = {
-  fullName: "Prateek M Vernekar",
-  dateOfBirth: "March 22, 1990", // World Water Day
-  email: "aqua.saver@waterconserve.org",
-  username: "@aquasaver",
-  biodata: "Passionate water conservation activist and environmental engineer. Dedicated to promoting sustainable water use practices and developing innovative solutions for water scarcity. Together, we can make every drop count!",
-  avatarUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPJ9cm0-r5p50py0yUzvM5ZtEB-xWoJRPRA&s",
-};
+import useAuthStore from '@/store/Auth';
 
 const dummyPosts = [
   { id: 1, title: "10 Easy Ways to Save Water at Home", excerpt: "Simple lifestyle changes that can significantly reduce your water footprint." },
@@ -25,6 +17,17 @@ const dummyGroups = [
 ];
 
 const UserProfilePage = () => {
+  const { user } = useAuthStore();
+
+  const dummyUser = {
+    fullName: user.name,
+    dateOfBirth: user.dateOfBirth, // World Water Day
+    email: user.email,
+    username: "@aquasaver",
+    biodata: user.biodata,
+    avatarUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPJ9cm0-r5p50py0yUzvM5ZtEB-xWoJRPRA&s",
+  };
+
   return (
     <div className="bg-gray-700 min-h-screen p-4 text-gray-200">
       <div className="max-w-3xl mx-auto bg-gray-900">
