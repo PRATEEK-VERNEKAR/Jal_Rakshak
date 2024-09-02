@@ -3,13 +3,21 @@ import Link from 'next/link';
 
 
 export default function Article() {
+  const cropsData = [
+    { crop: 'Sugarcane', states: 'Uttar Pradesh, Maharashtra, Karnataka' },
+    { crop: 'Tomato', states: 'Andhra Pradesh, Maharashtra, Karnataka' },
+    { crop: 'Grapes', states: 'Maharashtra, Karnataka, Tamil Nadu' },
+    { crop: 'Banana', states: 'Tamil Nadu, Maharashtra, Kerala' },
+    { crop: 'Cotton', states: 'Gujarat, Maharashtra, Andhra Pradesh' },
+    // Add more crops and states as needed
+  ];
 
   return (
     <div className="bg-white text-gray-900 min-h-screen p-4 md:p-8">
       <header className="mb-8 flex justify-between">
         <div>
           <h1 className="text-3xl font-bold mb-2">Drip Irrigation to Save Water in Agriculture</h1>
-          <p className="text-gray-600">From Wikipedia, the free encyclopedia</p>
+          <p className="text-gray-600">For Water Conservation, the free encyclopedia</p>
         </div>
 
         <div className="flex items-center space-x-4 mt-4">
@@ -34,7 +42,7 @@ export default function Article() {
         <section id="introduction">
           <h2 className="text-2xl font-semibold mb-2">Introduction</h2>
           <p>
-            Drip irrigation is an efficient and sustainable method of watering crops that delivers water directly to the plant's root zone through a network of tubes, pipes, and emitters. Unlike traditional irrigation methods, which often waste water through evaporation and runoff, drip irrigation minimizes water loss by applying it slowly and precisely where it's needed most. This technique not only conserves water but also reduces weed growth, prevents soil erosion, and enhances nutrient absorption by maintaining optimal soil moisture levels. Drip irrigation is especially beneficial in arid and semi-arid regions where water scarcity is a significant concern, offering a practical solution to support agricultural productivity while preserving vital water resources.
+            Drip irrigation is an efficient and sustainable method of watering crops that delivers water directly to the plant's root zone through a network of <span className='text-blue-600'>emitters</span>, pipes, and tubes. Unlike traditional irrigation methods, which often waste water through evaporation and runoff, drip irrigation minimizes water loss by applying it slowly and precisely where it's needed most. This technique not only conserves water but also reduces weed growth, prevents soil erosion, and enhances nutrient absorption by maintaining optimal soil moisture levels. Drip irrigation is especially beneficial in <span className='text-blue-600'>arid</span> and semi-arid regions where water scarcity is a significant concern, offering a practical solution to support agricultural productivity while preserving vital water resources.
           </p>
         </section>
 
@@ -44,17 +52,17 @@ export default function Article() {
             The history of drip irrigation dates back thousands of years, with its earliest forms believed to have been used in ancient agricultural practices. Some of the earliest evidence comes from China and the Middle East, where farmers used clay pots buried in the soil to slowly release water to plant roots, a rudimentary form of controlled irrigation. The modern concept of drip irrigation, however, began to take shape in the mid-20th century.
           </p>
           <p>
-            In the 1950s, Simcha Blass, an Israeli water engineer, observed a large tree growing much faster than others around it due to a leak in a nearby water pipe, which provided slow, consistent watering. Inspired by this, Blass developed the first modern drip irrigation system, using polyethylene tubing to deliver water directly to plant roots. This innovation led to the establishment of Netafim, a company that would go on to become a global leader in drip irrigation technology. Over the subsequent decades, drip irrigation systems have evolved, incorporating advanced materials and technologies such as pressure-compensating emitters, filtration systems, and automation, making them more efficient and accessible. Today, drip irrigation is widely used worldwide, particularly in water-scarce regions, revolutionizing agricultural practices and significantly improving water use efficiency.          </p>
+            In the 1950s, <span className='text-blue-600'>Simcha Blass</span>, an Israeli water engineer, observed a large tree growing much faster than others around it due to a leak in a nearby water pipe, which provided slow, consistent watering. Inspired by this, Blass developed the first modern drip irrigation system, using <span className='text-blue-600'>polyethylene tubing</span> to deliver water directly to plant roots. This innovation led to the establishment of Netafim, a company that would go on to become a global leader in drip irrigation technology. Over the subsequent decades, drip irrigation systems have evolved, incorporating advanced materials and technologies such as pressure-compensating emitters, filtration systems, and automation, making them more efficient and accessible. Today, drip irrigation is widely used worldwide, particularly in water-scarce regions, revolutionizing agricultural practices and significantly improving water use efficiency.          </p>
         </section>
 
         <section id="benefits">
           <h2 className="text-2xl font-semibold mb-2">Benefits</h2>
           <ul className="list-disc pl-5">
-            <li>Water conservation</li>
-            <li>Improved crop yield</li>
-            <li>Reduced fertilizer and nutrient loss</li>
-            <li>Less soil erosion</li>
-            <li>Prevents weed growth</li>
+            <li><span className='text-blue-600'>Water conservation</span></li>
+            <li><span className='text-blue-600'>Improved crop yield</span></li>
+            <li><span className='text-blue-600'>Reduced fertilizer and nutrient loss</span></li>
+            <li><span className='text-blue-600'>Less soil erosion</span></li>
+            <li><span className='text-blue-600'>Prevents weed growth</span></li>
           </ul>
         </section>
 
@@ -64,6 +72,28 @@ export default function Article() {
             Implementing a drip irrigation system involves several components including pumps, valves, filters, pipes, and emitters. The system can be customized based on crop type, soil conditions, and field size. Regular maintenance and monitoring are crucial for optimal performance.
           </p>
         </section>
+
+        <h2 className="text-2xl font-bold mb-4">Crops Suitable for Drip Irrigation</h2>
+      <div className="overflow-x-auto">
+        <table className="min-w-full border border-gray-300 bg-white text-left">
+          <thead>
+            <tr className="border-b border-gray-300 bg-gray-100">
+              <th className="px-4 py-2 font-semibold">Crop</th>
+              <th className="px-4 py-2 font-semibold">States in India</th>
+            </tr>
+          </thead>
+          <tbody>
+            {cropsData.map((crop, index) => (
+              <tr key={index} className="hover:bg-gray-50">
+                <td className="px-4 py-2 border-b border-gray-300">{crop.crop}</td>
+                <td className="px-4 py-2 border-b border-gray-300">{crop.states}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+        
 
         <section id="media" className="space-y-4">
           <h2 className="text-2xl font-semibold mb-2">Media</h2>
@@ -115,6 +145,8 @@ export default function Article() {
             <ul className="list-disc pl-5">
               <li><Link href="https://en.wikipedia.org/wiki/Drip_irrigation" className="text-blue-500 hover:underline">Drip Irrigation on Wikipedia</Link></li>
               <li><Link href="https://www.netafim.com/" className="text-blue-500 hover:underline">Netafim - Drip Irrigation Solutions</Link></li>
+              <li><Link href="https://vikaspedia.in/agriculture/agri-inputs/farm-machinary/drip-irrigation-system" className="text-blue-500 hover:underline">Reserved Drip irrigation system </Link></li>
+            
             </ul>
           </div>
         </section>
