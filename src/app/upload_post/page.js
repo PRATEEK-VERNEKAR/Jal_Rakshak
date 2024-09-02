@@ -8,6 +8,7 @@ const PostUploadForm = () => {
   const [title, setTitle] = useState('');
   const [subtitle, setSubtitle] = useState('');
   const [content, setContent] = useState('');
+  const [tags,setTags] = useState('');
   const [files, setFiles] = useState([]);
   const [uploadProgress, setUploadProgress] = useState({});
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
@@ -60,7 +61,7 @@ const PostUploadForm = () => {
             id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm border-2 border-gray-100   focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             required
           />
         </div>
@@ -72,7 +73,7 @@ const PostUploadForm = () => {
             id="subtitle"
             value={subtitle}
             onChange={(e) => setSubtitle(e.target.value)}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm border-2 border-gray-100  focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
           />
         </div>
 
@@ -83,11 +84,20 @@ const PostUploadForm = () => {
             value={content}
             onChange={(e) => setContent(e.target.value)}
             rows={10}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm  border-2 border-gray-100 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             required
           />
         </div>
-
+        <div>
+          <label htmlFor="tags" className="block text-sm font-medium text-gray-700">Add tags</label>
+          <input
+            type="text"
+            id="tags"
+            value={tags}
+            onChange={(e) => setTags(e.target.value)}
+            className="text-indigo-600 mt-1 block w-full rounded-md border-gray-300 shadow-sm border-2 border-gray-100  focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+          />
+        </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Upload Files</label>
           <div className="flex items-center space-x-4">
